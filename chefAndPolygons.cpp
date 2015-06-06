@@ -1,4 +1,7 @@
-
+struct Point{
+    int x;
+    int y;
+};
 // a Point is defined by its coordinates {int x, y;}
 //===================================================================
  
@@ -67,4 +70,8 @@ wn_PnPoly( Point P, Point* V, int n )
         }
     }
     return wn;
+}
+
+int main() {
+    
 }
