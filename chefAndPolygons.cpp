@@ -1,33 +1,31 @@
-struct Point{
+#include<iostream>
+
+using namespace std;
+// a Point is defined by its coordinates {int x, y;}
+struct Point
+{
     int x;
     int y;
 };
-// a Point is defined by its coordinates {int x, y;}
-//===================================================================
  
-
 // isLeft(): tests if a point is Left|On|Right of an infinite line.
 //    Input:  three points P0, P1, and P2
 //    Return: >0 for P2 left of the line through P0 and P1
 //            =0 for P2  on the line
 //            <0 for P2  right of the line
-//    See: Algorithm 1 "Area of Triangles and Polygons"
-inline int
-isLeft( Point P0, Point P1, Point P2 )
+
+inline int isLeft( Point P0, Point P1, Point P2 )
 {
     return ( (P1.x - P0.x) * (P2.y - P0.y)
             - (P2.x -  P0.x) * (P1.y - P0.y) );
 }
-//===================================================================
-
 
 // cn_PnPoly(): crossing number test for a point in a polygon
 //      Input:   P = a point,
 //               V[] = vertex points of a polygon V[n+1] with V[n]=V[0]
 //      Return:  0 = outside, 1 = inside
-// This code is patterned after [Franklin, 2000]
-int
-cn_PnPoly( Point P, Point* V, int n )
+
+int cn_PnPoly( Point P, Point* V, int n )
 {
     int    cn = 0;    // the  crossing number counter
 
@@ -44,15 +42,13 @@ cn_PnPoly( Point P, Point* V, int n )
     return (cn&1);    // 0 if even (out), and 1 if  odd (in)
 
 }
-//===================================================================
-
 
 // wn_PnPoly(): winding number test for a point in a polygon
 //      Input:   P = a point,
 //               V[] = vertex points of a polygon V[n+1] with V[n]=V[0]
 //      Return:  wn = the winding number (=0 only when P is outside)
-int
-wn_PnPoly( Point P, Point* V, int n )
+
+int wn_PnPoly( Point P, Point* V, int n )
 {
     int    wn = 0;    // the  winding number counter
 
@@ -72,6 +68,26 @@ wn_PnPoly( Point P, Point* V, int n )
     return wn;
 }
 
-int main() {
-    
+int main() 
+{
+    int t, n, m;
+    cin>>t;
+    while (t--) {
+        cin>>n;
+        Point PolygonVertex[n][100000];
+        
+        for(int i=0; i<n; i++) {
+            cin>>m;
+            for(int j=0; j<m; j++) {
+                //read (x,y)
+                cin>>PolygonVertex[i][j].x;
+                cin>>PolygonVertex[i][j].y;
+            }
+        }
+        
+        for(int i=0; i<n; i++) {
+            if(wn_PnPoly(PolygonVertex[i]))
+        }
+    }
+    return 0;
 }
