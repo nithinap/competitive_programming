@@ -70,12 +70,12 @@ int wn_PnPoly( Point P, Point* V, int n )
 
 int main() 
 {
-    int t, n, m;
+    int t, n;
     cin>>t;
     while (t--) {
         cin>>n;
         Point PolygonVertex[n][100000];
-        
+        int m[n];
         for(int i=0; i<n; i++) {
             cin>>m;
             for(int j=0; j<m; j++) {
@@ -86,6 +86,7 @@ int main()
         }
         
         for(int i=0; i<n; i++) {
+            
             if(wn_PnPoly(PolygonVertex[i]))
         }
     }
