@@ -68,7 +68,7 @@ int wn_PnPoly( Point P, Point* V, int n )
     return wn;
 }
 
-int main() 
+int main()
 {
     int t, n;
     cin>>t;
@@ -77,18 +77,31 @@ int main()
         Point PolygonVertex[n][100000];
         int m[n];
         for(int i=0; i<n; i++) {
-            cin>>m;
-            for(int j=0; j<m; j++) {
-                //read (x,y)
+            cin>>m[i];
+            for(int j=0; j<m[i]; j++) {
                 cin>>PolygonVertex[i][j].x;
                 cin>>PolygonVertex[i][j].y;
             }
         }
-        
-        for(int i=0; i<n; i++) {
-            
-            if(wn_PnPoly(PolygonVertex[i]))
+
+        for(int i=0; i<n-1; i++) {
+            //cout<<"Polygon vertices: "<<endl;
+            for(int j=i+1; j<n; j++) {
+                cout<<"Polygon "<<j<<endl;
+                for(int k=0; k<m[j]; k++) {
+                        cout<<"X["<<k<<"] : "<<PolygonVertex[j][k].x<<"  ;  ";
+                        cout<<"Y{"<<k<<"] : "<<PolygonVertex[j][k].y<<endl;
+
+                        if(wn_Poly(PolygonVertex[j][k], PolygonVertex[i], m[i]) == 0) {
+                                cout<<"Polygon "<<j<<" outside "<<i;
+                                break;
+                        }
+
+                }
+            }
         }
+
     }
     return 0;
 }
+
