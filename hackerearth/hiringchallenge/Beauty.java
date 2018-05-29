@@ -61,7 +61,6 @@ public class Beauty {
 					cum_freq += freq[a[j]];
 					res = (res + ((a[i] | a[j])
 							* (lookup[cum_freq + freq[a[i]] - 2] + ((long)freq[a[i]] * freq[a[j]] - 1) % MOD) % MOD)) % MOD;
-					res = res + (a[i] |a[j]) * lookup[freq]
 				}
 			}
 		/*} else { // ind = 1
