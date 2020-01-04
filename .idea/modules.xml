@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/challenge-box/challenge-box.iml" filepath="$PROJECT_DIR$/challenge-box/challenge-box.iml" />
       <module fileurl="file://$PROJECT_DIR$/codechef/codechef.iml" filepath="$PROJECT_DIR$/codechef/codechef.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codeforces/codeforces.iml" filepath="$PROJECT_DIR$/codeforces/codeforces.iml" />
       <module fileurl="file://$PROJECT_DIR$/competitive_programming.iml" filepath="$PROJECT_DIR$/competitive_programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google_codejam/google_codejam.iml" filepath="$PROJECT_DIR$/google_codejam/google_codejam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hackerearth/hackerearth.iml" filepath="$PROJECT_DIR$/hackerearth/hackerearth.iml" />
       <module fileurl="file://$PROJECT_DIR$/codechef/soroco/soroco.iml" filepath="$PROJECT_DIR$/codechef/soroco/soroco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spoj/spoj.iml" filepath="$PROJECT_DIR$/spoj/spoj.iml" />
     </modules>
   </component>
 </project>
