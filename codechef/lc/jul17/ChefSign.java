@@ -1,4 +1,4 @@
-package lc.july;
+package lc.jul17;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,8 +1,8 @@
-package lc.july;
+package lc.jul17;
 
 import java.util.Arrays;
 
-public class PrimeSieve {
+public class PrimeSieve1 {
 	public static void main(String[] args) {
 		int n = 400;
 		boolean[] marked = new boolean[n + 1];
