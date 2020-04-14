@@ -18,7 +18,6 @@ public class CommonFactor {
 	
 	private static void SeiveOfEratosthenes(Long num) {
 		//int[] prime = new int[num+1];
-		BitSet 
 		for(Long p = new Long(2); p<=Math.sqrt(num); p++) {
 			
 		}
